@@ -42,6 +42,23 @@
  ### Greater than -> $gt, greater than or equal -> $gte
  #### Find those, whose prices are less than or equal to 300
  ```db.nameOfCollection.find({ price: {$lte:300 } })```
- #### Searching with
  
+ #### Searching with multiple criteria
+ ```db.nameOfCollection.find({price: {$lte:300}, rating: {$gt:4}} )```
+ 
+ ### Searching with 'or' query
+ ```db.nameOfCollection.find({ $or: [ {price:{$lt:500}, {rating:{$gte:4.2} ] })```
+ 
+ ## Updating Documents
+ 
+ ##### ```updateOne``` will only update the first matching query to update many we have to use ```updateMany``` 
+ ```db.nameOfCollection.updateOne({name: 'Prakash'}, { $set: {age: 30} })```
+
+## Deleting Documents
+#### delete all docuemnts whose ratings are less than 3
+``` db.nameOfCollections.deleteMany({rating :{$lt: 3} })```
+
+
+
+
  
