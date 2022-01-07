@@ -30,7 +30,10 @@
 ## Stop Conatiner
   - docker stop <containerId> (To view container details ```docker ps```)
   - docker stop <name of the container
-  
+                      
+## Naming a Conatiner
+   - docker run --name ```testname``` -d nginx:latest
+                      
 ## Mapping nginx to port 80
   -  docker run -d -p 8080:80 nginx:latest
   ``` can map differnt port number to port 80 ```
