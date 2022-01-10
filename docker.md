@@ -1,5 +1,8 @@
 # Docker
 
+## Login to the Docker Hub using the command 
+- ```docker login -u YOUR-USER-NAME```
+
 ## Pull images
 - docker pull <imnageName>
   
